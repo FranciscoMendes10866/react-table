@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/anek-telugu': ^4.5.2
+  '@stitches/react': ^1.2.8
   '@types/lodash.get': ^4.4.7
   '@types/react': ^18.0.17
   '@types/react-dom': ^18.0.6
@@ -12,6 +14,8 @@ specifiers:
   vite: ^3.0.7
 
 dependencies:
+  '@fontsource/anek-telugu': 4.5.2
+  '@stitches/react': 1.2.8_react@18.2.0
   lodash.get: 4.4.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -302,6 +306,10 @@ packages:
     dev: true
     optional: true
 
+  /@fontsource/anek-telugu/4.5.2:
+    resolution: {integrity: sha512-ElLXWQgTsxgGmPe7OleDJJc4JqDMyC/9ymz3SJkqjY/3l6wyrcbOXWY2UVu1GbjPeNm+l1xg0xQOpn+qBTTqGg==}
+    dev: false
+
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
     engines: {node: '>=6.0.0'}
@@ -339,6 +347,14 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
+
+  /@stitches/react/1.2.8_react@18.2.0:
+    resolution: {integrity: sha512-9g9dWI4gsSVe8bNLlb+lMkBYsnIKCZTmvqvDG+Avnn69XfmHZKiaMrx7cgTaddq7aTPPmXiTsbFcUy0xgI4+wA==}
+    peerDependencies:
+      react: '>= 16.3.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@types/lodash.get/4.4.7:
     resolution: {integrity: sha512-af34Mj+KdDeuzsJBxc/XeTtOx0SZHZNLd+hdrn+PcKGQs0EG2TJTzQAOTCZTgDJCArahlCzLWSy8c2w59JRz7Q==}

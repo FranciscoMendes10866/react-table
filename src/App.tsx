@@ -1,3 +1,6 @@
+import "@fontsource/anek-telugu";
+import { styled } from "@stitches/react";
+
 import { Table, IColumnType } from "./components";
 
 interface IData {
@@ -6,24 +9,35 @@ interface IData {
   tags: string[];
 }
 
+const Span = styled("span", {
+  background: "#596b7e",
+  color: "white",
+  paddingLeft: 10,
+  paddingRight: 10,
+  borderRadius: 99999,
+});
+
 const columns: IColumnType<IData>[] = [
   {
     key: "fullName",
     title: "Full Name",
+    width: 200,
   },
   {
     key: "role",
     title: "Role",
+    width: 200,
   },
   {
     key: "tags",
     title: "Tags",
+    width: 200,
     render: (_, { tags }) => (
       <>
         {tags.map((tag, tagIndex) => (
-          <code key={`tag-${tagIndex}`} style={{ marginLeft: tagIndex * 4 }}>
+          <Span key={`tag-${tagIndex}`} style={{ marginLeft: tagIndex * 4 }}>
             {tag}
-          </code>
+          </Span>
         ))}
       </>
     ),
@@ -39,7 +53,7 @@ const data: IData[] = [
   {
     fullName: "Ricardo Malva",
     role: "Social Media Manager",
-    tags: ["designer"],
+    tags: ["designer", "photographer"],
   },
 ];
 
