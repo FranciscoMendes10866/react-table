@@ -1,6 +1,6 @@
 import { styled } from "@stitches/react";
 
-import { TableHeaderCell } from "./TableHeaderCell";
+import { TableHeader } from "./TableHeader";
 import { TableRow } from "./TableRow";
 
 export interface IColumnType<T> {
@@ -25,7 +25,7 @@ export function Table<T>({ data, columns }: Props<T>): JSX.Element {
   return (
     <TableWrapper>
       <thead>
-        <TableHeaderCell columns={columns} />
+        <TableHeader columns={columns} />
       </thead>
       <tbody>
         <TableRow data={data} columns={columns} />

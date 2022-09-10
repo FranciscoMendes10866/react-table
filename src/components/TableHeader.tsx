@@ -6,7 +6,7 @@ interface Props<T> {
   columns: IColumnType<T>[];
 }
 
-const TableHeader = styled("th", {
+const TableHeaderCell = styled("th", {
   backgroundColor: "#f1f1f1",
   padding: 12,
   fontWeight: 500,
@@ -21,19 +21,17 @@ const TableHeader = styled("th", {
   },
 });
 
-export function TableHeaderCell<T>({ columns }: Props<T>): JSX.Element {
+export function TableHeader<T>({ columns }: Props<T>): JSX.Element {
   return (
-    <>
-      <tr>
-        {columns.map((column, columnIndex) => (
-          <TableHeader
-            key={`table-head-cell-${columnIndex}`}
-            style={{ width: column.width }}
-          >
-            {column.title}
-          </TableHeader>
-        ))}
-      </tr>
-    </>
+    <tr>
+      {columns.map((column, columnIndex) => (
+        <TableHeaderCell
+          key={`table-head-cell-${columnIndex}`}
+          style={{ width: column.width }}
+        >
+          {column.title}
+        </TableHeaderCell>
+      ))}
+    </tr>
   );
 }
